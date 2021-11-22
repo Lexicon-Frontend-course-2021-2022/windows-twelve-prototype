@@ -1,13 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:wght@300&display=swap');
+/* font-family: 'Georama', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=VT323&display=swap');
+/* font-family: 'VT323', monospace; */
+/* font-family: 'Space Mono', monospace; */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #018281;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0 10px;
+    align-items: center;
+    background-color: #C0C0C0;
+    height: 32px;
+}
+
+nav > * {
+    border-top: 2px solid #ddd;
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #888;
+    border-bottom: 2px solid #888;
+    padding: 2px 4px;
+}
+nav .link {
+    color: white;
+    margin-left: 0.75rem;
+    text-decoration: none;
+}
+
+#Start {
+    position: absolute;
+    top: calc(100vh - 536px);
+    left: 1px;
+    height: 500px;
+    width: 300px;
+    background-color: #ccc;
+    display: flex;
+
+}
+
+#sidebar {
+    height: 490px;
+    width: 50px;
+    margin: 5px;
+    top: calc(100vh - 400px);
+    left: -220px;
+    background-color: #939393;
+
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+
+}
+#start-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#Notepad {
+    position: absolute;
+    height: 50vh;
+    width: 50vw;
+    left: 100px;
+    top: 100px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+#Solitaire {
+    position: absolute;
+    height: 70vh;
+    width: 70vw;
+    left: 12vw;
+    top: 6vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.solitaire {
+    background-image: url("http://current-project.thohell.com/solitaire.png") !important;
+    background-size: cover;
+    flex: auto;
+}
+
+#Internet {
+    position: absolute;
+    height: 90vh;
+    width: 90vw;
+    left: 5vw;
+    top: 2vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+#Internet .address-bar {
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    padding: 2px;
+}
+
+#Internet .address-bar > .input {
+    background-color: #fff;
+    flex:auto;
+    padding: 4px;
+}
+
+.caption {
+    background-color: #010180;
+    color: white;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    height: 24px;
+    gap: 2px;
+}
+
+.caption > img{
+    width: 16px;
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+.menu {
+    background-color: #ccc;
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    padding: 2px;
+}
+
+#Notepad .content {
+    padding: 0px 3px;
+    font-family: 'VT323', monospace;
+    flex: auto;
+    font-size: 22px;
+}
+
+.startbar-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.buttons {
+    display: flex;
+    gap: 2px;
+    margin: 0 0 0 auto;
+    padding-right: 3px;
+}
+
+.button {
+    width: 12px;
+    height:12px;
+    background-color: #ccc;
+    color: #000;
+    border-top: 2px solid #ddd;
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #888;
+    border-bottom: 2px solid #888;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.button.close:after { content: "X"; }
+.button.max:after { content: "⬜︎"; }
+.button.min:after { content: "_"; }
+
+.window {
+    border-top: 2px solid #ddd;
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #888;
+    border-bottom: 2px solid #888;
+}
+
+.inset {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #888;
+    border-top: 1px solid #888;
+}
+
+.lunarstorm {
+    background-image: url("https://anaytrxdzo.cloudimg.io/v7/_amelia_/4476/2016/01/Ska%CC%88rmavbild-2016-01-05-kl.-21.22.091.png?force_format=original") !important;
+    background-size: cover;
+    flex: auto;
+}
+
+.statusbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ccc;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.systray {
+    margin: 0 0 0 auto;
+}
+
+#Winamp {
+    position: absolute;
+    top: 20vh;
+    left: 24vw;
+}
+
+#MediaPlayer {
+    position: absolute;
+    top: 20vh;
+    left: 24vw;
+    width: 324px;
+    height: 288px;
+    background-color: #ccc;
+}
+
